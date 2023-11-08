@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+        <script>
+           function appendText () {
+                var txt1 = "<p>This is text along with html markup</p>"; //Create text with HTML
+                var txt2 = $("<p></p>").text("This is text."); //Create text with JQuery
+                var txt3 = document.createElement("p"); // Create text with the DOM
+                txt3.innerHTML = "Text created using DOM";
+                $("body").append(txt1,txt2,txt3); //Append new elements
+            }
+        </script>
+    </head>
+
+    <body>
+
+        <p>This is a prargraph</p>
+        <button onclick="appendText()">Append text</button>
+    </body>
+</html>
